@@ -1,0 +1,60 @@
+{
+  "project": "EO-Based Ecosystem Extent and Condition Screening Around Mol, Belgium",
+  "run_date": "2026-09-01",
+  "study_area_bbox_wgs84": [
+    4.95,
+    51.15,
+    5.25,
+    51.3
+  ],
+  "analysis_grid": {
+    "crs": "EPSG:32631",
+    "width": 2142,
+    "height": 1728,
+    "pixel_area_ha": 0.01
+  },
+  "sentinel_2": {
+    "collection": "sentinel-2-l2a",
+    "item_id": "S2A_MSIL2A_20240625T103631_R008_T31UFS_20240625T181147",
+    "acquisition_datetime": "2024-06-25T10:36:31.024000+00:00",
+    "catalogue_cloud_cover_pct": 0.811239,
+    "valid_observation_coverage_pct": 99.04,
+    "bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B08",
+      "B11",
+      "SCL"
+    ]
+  },
+  "worldcover": {
+    "collection": "esa-worldcover",
+    "item_id": "ESA_WorldCover_10m_2021_v200_N51E003",
+    "asset": "map"
+  },
+  "processing": {
+    "date_search_range": "2024-06-01/2024-08-31",
+    "cloud_filter_pct": 15,
+    "target_resolution_m": 10,
+    "excluded_scl_classes": [
+      0,
+      1,
+      3,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ndvi_formula": "(NIR-Red)/(NIR+Red)",
+    "ndmi_formula": "(NIR-SWIR1)/(NIR+SWIR1)",
+    "exploratory_condition_index": "100 * (0.65 * clip((NDVI+0.10)/0.90) + 0.35 * clip((NDMI+0.40)/1.00))"
+  },
+  "limitations": [
+    "WorldCover classes are land-cover proxies, not an authoritative ecosystem or habitat typology.",
+    "One Sentinel-2 date does not represent annual ecosystem condition.",
+    "NDVI and NDMI do not directly measure biodiversity, ecological integrity, or ecosystem services.",
+    "The exploratory condition index is uncalibrated and must not be used for policy ranking.",
+    "A production account requires authoritative typologies, multi-temporal indicators, reference data, and uncertainty assessment."
+  ]
+}

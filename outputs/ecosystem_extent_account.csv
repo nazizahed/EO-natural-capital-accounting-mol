@@ -1,0 +1,9 @@
+worldcover_code,ecosystem_proxy,pixel_count,extent_ha,share_of_mapped_area_pct
+10,Tree cover,1530156,15301.56,41.34
+30,Grassland,857907,8579.07,23.178
+40,Cropland,768067,7680.67,20.751
+50,Built-up,419251,4192.51,11.327
+80,Permanent water bodies,119893,1198.93,3.239
+60,Bare or sparse vegetation,2988,29.88,0.081
+90,Herbaceous wetland,2871,28.71,0.078
+20,Shrubland,243,2.43,0.007
