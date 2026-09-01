@@ -52,6 +52,10 @@ The repository contains the derived tables, metadata, and summary figure only.
 No downloaded Sentinel-2 or WorldCover raster files are committed; the script
 reads the required public Cloud Optimized GeoTIFF windows through STAC.
 
+## Summary map
+
+![Four-panel summary of the Sentinel-2 context, ESA WorldCover ecosystem proxies, NDVI, and exploratory EO condition index around Mol](outputs/summary_map.png)
+
 ## Completed run results
 
 The validated run used Sentinel-2 Level-2A data acquired on **25 June 2024** (catalogue cloud cover: **0.81%**) and ESA WorldCover 2021 v2.0. The aligned 10 m grid covered **37,013.76 ha**, with **99.04%** valid Sentinel-2 observation support after scene-classification masking.
